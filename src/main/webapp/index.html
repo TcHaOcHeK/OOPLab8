@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Музыкальное оборудование</title>
+  <link rel="stylesheet"  type="text/css" href="css/styleCardInfo.css">
+</head>
+<body>
+<h1>Мое музыкальное оборудование</h1>
+
+<div class="form-container">
+  <h2>Добавить новое оборудование</h2>
+  <form id="equipmentForm">
+    <div class="form-group">
+      <label for="name">Название:</label>
+      <input type="text" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="type">Тип оборудования:</label>
+      <select id="type" required>
+        <option value="">Выберите тип</option>
+        <option value="Синтезатор">Синтезатор</option>
+        <option value="Гитара">Гитара</option>
+        <option value="Барабаны">Барабаны</option>
+        <option value="Микшер">Микшер</option>
+        <option value="Усилитель">Усилитель</option>
+        <option value="Эффекты">Педиалы эффектов</option>
+        <option value="Аудиоинтерфейс">Аудиоинтерфейс</option>
+        <option value="Другое">Другое</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="brand">Бренд:</label>
+      <input type="text" id="brand" required>
+    </div>
+    <div class="form-group">
+      <label for="model">Модель:</label>
+      <input type="text" id="model" required>
+    </div>
+    <div class="form-group">
+      <label for="year">Год выпуска:</label>
+      <input type="number" id="year" min="1900" max="2023" required>
+    </div>
+    <div class="form-group">
+      <label for="price">Цена (руб):</label>
+      <input type="number" id="price" min="0" required>
+    </div>
+    <div class="form-group">
+      <label for="condition">Состояние:</label>
+      <select id="condition" required>
+        <option value="">Выберите состояние</option>
+        <option value="Новое">Новое</option>
+        <option value="Отличное">Отличное</option>
+        <option value="Хорошее">Хорошее</option>
+        <option value="Удовлетворительное">Удовлетворительное</option>
+        <option value="Требует ремонта">Требует ремонта</option>
+      </select>
+    </div>
+    <button type="submit">Добавить оборудование</button>
+  </form>
+  <div id="message" class=""></div>
+</div>
+
+<h2>Моя коллекция</h2>
+<div id="equipmentList" class="equipment-container"></div>
+
+<script src="javaScript/cardInfo.js"></script>
+</body>
+</html>
